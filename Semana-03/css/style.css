@@ -1,5 +1,9 @@
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 .header {
     position: fixed;
@@ -157,18 +161,26 @@ main{
     scroll-margin-top: 200px;
 }
 #home h2 {
-    position: relative;
+    position: absolute;
     display: inline-block;
-    left: 470.47px;
-    margin: 48px 0;
-    padding: 13px 38px;
-    background-color: #C9E2C8;
-    border: 4px solid #606765;
-    border-radius: 20px;
+    left: 500px;
+    padding-top: 13px;
+    top: 56px;
     color: #373867;
     text-align: center;
     font-size: 49.36px;
     text-transform: uppercase;
+}
+.welcome-background{
+    position: relative;
+    width: 307px;
+    height: 81px;
+    margin-left: 474px;
+    top: 52px;
+    background: #C9E2C8;
+    border: 2px solid #000000;
+    filter: blur(4px);
+    border-radius: 20px;
 }
 #home .welcome-p-1{
     position: absolute;
@@ -398,7 +410,258 @@ input:checked + .slider:before {
     font-size: 16px;
     color: white;
 }
-            
+#history{
+    position: relative;
+    height: 1093px;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229,
+     242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+    scroll-margin-top: 200px;
+}
+#history h3{
+    display: inline-block;
+    width: 195px;
+    height: 30px;
+    margin: 80px 825px 29px 56px;
+    font-weight: 700;
+    font-size: 20.5px;
+    line-height: 24px;
+    text-decoration: underline;
+}
+.h4-mission-1{
+    display: inline;
+    width: 819px;
+    height: 45px;
+    margin-left: 61px;
+    margin-top: 29px;
+    font-weight: 700;
+    font-size: 30.8px;
+    line-height: 36px;
+    align-items: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #373867;
+    text-decoration: underline;
+    text-decoration-color: #8FD5C8;
+}
+.h4-mission-2{
+    display: inline;
+    width: 819px;
+    height: 45px;
+    margin-top: 29px;
+    font-weight: 700;
+    font-size: 30.8px;
+    line-height: 36px;
+    align-items: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #373867;
+    text-decoration: underline;
+    text-decoration-color: #373867;
+}
+.history-logo{
+    display: inline-block;
+    width: 112px;
+    height: 128px;
+    margin-top: 40px;
+}
+.mission-p1{
+    width: 535px;
+    height: 45px;
+    margin-left: 385px;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 67px;
+    text-align: center;
+    color: #151515;
+}
+.mission-p2{
+    margin-top: 29px;
+}
+.mission-p2,.mission-p3,.mission-p4{
+    width: 1209px;
+    height: 30px;
+    margin-left: 32px;
+    font-weight: 400;
+    font-size: 18.75px;
+    line-height: 26px;
+    text-align: center;
+    color: #1C1C37;
+}
+.say-about-us-h4{
+    width: 609px;
+    height: 43px;
+    margin-left: 61px;
+    margin-top: 43px;
+    font-weight: 600;
+    font-size: 27.37px;
+    line-height: 32px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #373867;
+}
+.customer-p5{
+    width: 1134px;
+    height: 21px;
+    padding: 20px 0 0 11px;
+    color: rgba(0, 0, 0, 0.8);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17.25px;
+    line-height: 20px;
+}
+.customer-p6{
+    width: 140px;
+    height: 21px;
+    margin: 11px 0 0 958px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 20px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15.5px;
+    line-height: 18px;
+}
+.customer{
+    width: 1156px;
+    height: 81px;
+    margin-left: 85px;
+    margin-top: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5.98712px;
+}
+.about-us-h4{
+    width: 116px;
+    height: 29px;
+    margin: 88px 0 0 61px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #373867;
+}
+.about-us-p7, .about-us-p8{
+    display: inline-block;
+    width: 769px;
+    margin: 40px 0 0 49px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #373867;
+}
+.about-us-p8{
+    margin: 0 0 0 49px;
+}
+.history-image{
+    position: absolute;
+    box-sizing: border-box;
+    width: 363px;
+    height: 251px;
+    top: 760px;
+    left: 862px;
+    border: 0.427652px solid #000000;
+    box-shadow: inset 0px 3.42121px 6.84243px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 3.42121px 4.27652px rgba(0, 0, 0, 0.25));
+}
+#products {
+    position: relative;
+    top: 95px;
+    height: 1376px;
+    scroll-margin-top: 200px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    color: #000000;
+}
+.products-options img {
+    padding: 12px;
+    width: 384px;
+    height: 284px;
+    border-radius: 20px;
+}
+#products h3 {
+    width: 195px;
+    height: 36px;
+    margin: 0 0 42px 75px;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: underline;
+}
+.products-options {
+    display: inline-block;
+    width: 592px;
+    height: 350px;
+    text-align: center;
+}
+.products-options h4 {
+    margin: 0 0 24px 135px;
+    width: 324px;
+    height: 60px;
+    font-size: 24.4762px;
+    line-height: 30px;
+    text-align: start;
+}
+.products-options p{
+    width: 324px;
+    height: 72px;
+    padding-left: 135px;
+    font-weight: 400;
+    font-size: 14.75px;
+    line-height: 18px;
+    text-align: start;
+}
+.products-options ul{
+    width: 324px;
+    padding-left: 165px; 
+    height: 88px;
+    font-weight: 400;
+    font-size: 14.75px;
+    line-height: 18px;
+    text-align: start;
+    list-style: disc;
+}
+#about-us{
+    position: relative;
+    top: 49px;
+    height: 1273px;
+    scroll-margin-top: 200px;
+}
+#about-us h3 {
+    margin: 0 0 49px 100px;
+    color: #373867;
+    font-weight: 700;
+    font-size: 40px;
+}
+.about-us-options {
+    display: block;
+    width: 592px;
+    height: 350px;
+    text-align: center;
+}
+.about-us-options h4 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #373867;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+.about-us-options img {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 477px;
+    height: 304px;
+    border: 0.35px solid #000000;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+
+
+
+
+
+
+
+
 footer{
     margin-left: 340px;
 }
