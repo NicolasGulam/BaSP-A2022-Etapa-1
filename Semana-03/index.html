@@ -170,9 +170,9 @@
                         Inscription Form
                     </h3>
                     <form action="">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <select name="contactArea" required>
+                        <input type="text" placeholder="Name" required class="texts">
+                        <input type="email" placeholder="Email" required class="texts">
+                        <select name="contactArea" required class="contact-area">
                             <option value="" hidden selected>
                                 Choose Contact Area
                             </option>
@@ -186,70 +186,77 @@
                                 Merchandising
                             </option>
                         </select> 
-                        <input id="emailMe" type="checkbox">
-                        <label for="emailMe">
+                        <label for="emailMe" class="check">
+                            <input id="emailMe" type="checkbox" >
+                            <span class="slider round"></span>
+                        </label>
+                        <label id="email-text">
                             Email me a copy
                         </label>
-                        <input id="imAHuman" type="checkbox" required>
-                        <label for="imAHuman">
+                        <label for="imAHuman" class="check">
+                            <input id="imAHuman" type="checkbox" required>
+                            <span class="slider round"></span>
+                        </label>
+                        <label id="human-text">
                             I am a human and I accept terms of service
                         </label>
-                        <label>
+                        <label class="text-area">
                             Text
                         </label>
-                        <textarea name="message" placeholder="Enter your text here..." id="formMessage" required>
+                        <textarea name="message" placeholder="Enter your text here..." id="form-message" required>
                         </textarea>
-                        <input type="button" name="send" id="sendButton" value="Send">
+                        <button class="buttons-navs"><input type="button" name="send" id="send-button" value="Send">
+                        </button>
                     </form>
                 </div>
             </section>
             <section class="sections">
                 <div id="history">
-                    <h3 class="title-company">
+                    <h3>
                         Company’s Mission
                     </h3>
-                    <h4>
+                    <h4 class="h4-1">
                         Where we started; where we are headed
                     </h4>
                     <img src="assets/img/logo.ico" alt="logo">
-                    <p>
+                    <p class="p1">
                         Make time your ally; make puntuality the difference
                     </p>
-                    <p>
+                    <p class="p2">
                         Our mission is to allow workers all over the world to reach their full potential.
                     </p>
-                    <p>
+                    <p class="p3">
                         Our goal is to bring more power to start-ups through top-notch and user-friendly time-tracking 
                         webapps, easily accessible through any device.
                     </p>
-                    <p>
+                    <p class="p4">
                         We believe in integrity, honesty, passion for our client’s ideas and communication.
                     </p>
-                    <h4>
+                    <h4 class="h4-2">
                         Hear what they say about us
                     </h4>
-                    <p>
+                    <p class="p5">
                         “TrackGenix allows us to effortlessly and easily track total workflow in each of our projects 
                         and make a balanced distribution of team workload” 
                     </p>
-                    <p>
+                    <p class="p6">
                         -Satisfied Customer
                     </p>
-                    <h4>
+                    <h4 class="h4-3">
                         About Us
                     </h4>
-                    <p>
+                    <p class="p7">
                         RadiumRocket developed TrackGenix as a software solution for optimal time-tracking and project
                         management as a request for one of its most trusted clients, GigaTech Software Solutions, in 
                         late 2021, and swiftly became one of the most requested services in all of the million-dollar 
                         South American productivity industry.
                     </p>
-                    <p>
+                    <p class="p8">
                         RadiumRocket are a group of passionate people fond of the latest cutting edge technologies in 
                         software development. They position ourselves at your side through all the process of 
                         development being responsible and co-workers with you to successfully get your product moving.
                     </p>
-                    <img src="assets/img/history.jpg" alt="historyImage">
+                    <img src="assets/img/history.jpg" alt="historyImage" class="history-image">
                 </div>
             </section>
             <section class="sections">
@@ -388,8 +395,8 @@
                             <li>“Report Reviews Guide” 09:10</li>
                             <li>“Google Calendar & other web services integration” 11:25</li>
                         </ol>
-                        <a href="https://YouTube.com" target="_blank"><input type="button" name="playlist" value="Browse
-                            Full Playlist on YouTube"></a>
+                        <button class="buttons-navs"><a href="https://YouTube.com" target="_blank"><input type="button" name="playlist" 
+                        value="BrowseFull Playlist on YouTube"></a></button>
                     </article>
                 </div>
             </section>
