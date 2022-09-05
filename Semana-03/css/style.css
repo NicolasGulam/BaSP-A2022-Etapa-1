@@ -1,6 +1,28 @@
 body{
     font-family: "Roboto", sans-serif;
 }
+.header {
+    position: fixed;
+    width: 1513px;
+    height: 92px;
+    background-color: #373867;
+    z-index: 10;
+}
+.header img{
+    padding: 12px 26px;
+    width: 60px;
+    height: 65px;
+}
+.header h1{
+    position: absolute;
+    left: 573px;
+    top: 9px;
+    color: #479679;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+}
 .buttons-navs{
     background: none;
     color: inherit;
@@ -10,46 +32,30 @@ body{
     cursor: pointer;
     outline: inherit;
 }
-.header {
+.nav .nav-bar{
     position: fixed;
+    margin: 91px 0 0 247px;
+    width: 1277px;
+    z-index: 15;
     background-color: #373867;
-    width: 1513px;
-    height: 92px;
-}
-.header h1{
-    color: #479679;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 60px;
-    position: absolute;
-    width: 366px;
-    height: 58px;
-    left: 573px;
-    top: 9px;
-    line-height: 70px;
-}
-.header img{
-    padding: 12px 26px;
-    width: 65px;
-    height: 67px;
-}
-.nav .navBar{
-    position: fixed;
-    background-color: #373867;
-    margin: 91px 0 0 253px;
-    width: 1512px;
-}
-.nav .navBar ul li{
     border: 2px solid #000;
-    width: 210px;
-    height: 55px;
-    font-size: 20px;
 }
-.nav .navBar ul li a{
+.nav .nav-bar ul li{
+    width: 207px;
+    height: 55px;
+    border-left: 2px solid #000;
+}
+.nav .nav-bar ul li a{
+    position: relative;
+    top: 17px;
     color: #479679;
     text-decoration: none;
+    font-size: 20px;
 }
-.nav .navBar ul li a:hover{
+#second-child a{
+    top: 6px;
+}
+.nav .nav-bar ul li a:hover{
     text-shadow: 2px 3px 5px rgba(0,0,0,0.6),
                 -1px -1px 0 #fff,
                 0   -1px 0 #fff,
@@ -60,67 +66,53 @@ body{
                 -1px  1px 0 #fff,
                 -1px  0   0 #fff;
 }
-
-main{
-    left: 253px;
-    position: relative;
-    width: 1259px;
-    z-index: -1;
-}
-footer{
-    margin-left: 340px;
-}
-
-.aside .asideBar{
+.aside .aside-bar{
     position: fixed;
-    background-color: #EBECF0;
     width: 253px;
     height: 100%;
+    background-color: #EBECF0;
     margin-top: 91px;
+    z-index: 50;
 }
 .aside input{
-    width: 227px;
+    width: 236px;
     height: 30.49px;
     margin-left: 8px;
     margin-top: 21px;
     background: #FFFFFF;
-    border-radius: 3.41808px;
+    border-radius: 3.418px;
 }
-.aside .asideBar p{
-    width: 50px;
-    height: 23px;
+.aside .aside-bar form .buttons-navs{
+    position: absolute;
+    top: 31.25px;
+    right: 25.24px;
+    color: #373867;
+    opacity: 0.5;
+}
+.aside .aside-bar .menu-p{
+    position: absolute;
     margin-left: 92px;
     margin-top: 17.51px;
-    font-style: normal;
     font-weight: 700;
     font-size: 19.3686px;
-    line-height: 23px;
     color: #373867;
 }
-.aside .asideBar img{
-    width: 20.51px;
-    height: 20.51px;
-    margin-right: 21px;
-    margin-top: 27px;
+.aside-bar ul{
+    margin: 62px 45px 0;
 }
-.aside .asideBar ul li a{
-    text-decoration: none;
-    top: 162px;
-    display: block;
-    font-weight: 400;
-    font-size: 16.2704px;
-    line-height: 33px;
-    color: #479679;
-    border-top: 1px solid #000000;
+.aside-bar ul li{
     width: 142px;
-    height: 40px;
-    margin-left: 33.7%;
-    margin-right: 33.7%;
-    margin-top: 27.27%;
-    font-style: normal;
-    line-height: 19px;
+    height: 46px;
+    border-bottom: 1px solid #000;
 }
-.aside .asideBar ul li a:hover{
+.aside-bar ul li a{
+    position: relative;
+    top: 15px;
+    color: #479679;
+    text-decoration: none;
+    font-size: 16px;
+}
+.aside .aside-bar ul li a:hover{
     text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
                 -1px -1px 0 #fff,
                 0   -1px 0 #fff,
@@ -131,137 +123,162 @@ footer{
                 -1px  1px 0 #fff,
                 -1px  0   0 #fff;
 }
-
-.hours-log h4{
-position: absolute;
-width: 153px;
-height: 28px;
-left: 294px;
-top: 1108px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 35px;
-text-align: center;
-color: #373867;
+.aside .developed-p{
+    position: absolute;
+    width: 236px;
+    height: 13px;
+    left: 12px;
+    top: 710px;
+    font-weight: 400;
+    font-size: 11px;
 }
-.hours-log img{
+.aside .logo-aside{
+    position: absolute;
+    width: 66px;
+    height: 70px;
+    top: 609px;
+    left: 95px;
+}
+main{
     position: relative;
-    width: 252px;
-    height: 240px;
-    left: 244px;
-    top: 1156px;
-    background: rgba(170, 206, 155, 0.3);
-    border-radius: 20px;
+    left: 253px;
+    width: 1259px;
+    z-index: 2;
 }
-.res-mang img{
+.sections{
+    border-bottom: 2px solid #000;
+}
+#home {
     position: relative;
-    width: 252px;
-    height: 240px;
-    left: 244px;
-    top: 1489px;
-    background: rgba(170, 206, 155, 0.3);
-    border-radius: 20px;
-}
-.reports img{
-    position: relative;
-    width: 252px;
-    height: 240px;
-    left: 768px;
-    top: 1156px;
-    background: rgba(170, 206, 155, 0.3);
-    border-radius: 20px;
-}
-.multiple-roles{
-    position: relative;
-    width: 252px;
-    height: 240px;
-    left: 768px;
-    top: 1489px;
-    background: rgba(170, 206, 155, 0.3);
-    border-radius: 20px;
-}
-
-.home {
-    height: 894px;
+    top: 150px;
+    height: 940px;
     background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229,
      242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
-    position: relative;
-    top: 54px;
 }
-.home h2 {
-    text-align: center;
-    padding: 10px 38px;
+#home h2 {
+    position: relative;
     display: inline-block;
-    background-color: rgba(170, 206, 155, 0.53);
     left: 470.47px;
     margin: 48px 0;
-    position: relative;
-    color: #373867;
-    font-size: 49.36px;
-    border: 4px solid #a09b9b;
+    padding: 13px 38px;
+    background-color: #C9E2C8;
+    border: 4px solid #606765;
     border-radius: 20px;
+    color: #373867;
+    text-align: center;
+    font-size: 49.36px;
     text-transform: uppercase;
 }
-.home p{
-    font-size: 28.25px;
-    width: 546px;
+#home .welcome-p-1{
     position: absolute;
-    line-height: 41px;
-    top: 268px;
+    top: 281px;
     left: 134px;
-    letter-spacing: 1px;
+    width: 546px;
     color: #373867;
+    font-size: 28.25px;
+    line-height: 41px;
+    letter-spacing: 1px;
 }
-
-.home img {
+#home .welcome-p-2{
+    position: absolute;
+    top: 400px;
+    left: 134px;
+    width: 546px;
+    color: #373867;
+    font-size: 28.25px;
+    line-height: 41px;
+    letter-spacing: 1px;
+}
+#home img {
+    position: absolute;
     width: 500px;
     height: 272.5px;
-    position: absolute;
     top: 257.56px;
     left: 724.8px;
 }
-
 #features {
     position: relative;
     top: 135px;
-    height: 982px;
+    height: 1124px;
 }
-
 #features h3 {
+    margin: 0 0 49px 100px;
+    color: #373867;
     font-weight: 700;
     font-size: 40px;
-    color: #373867;
-    margin: 0 0 49px 100px;
 }
-
 .features-options {
     display: inline-block;
     width: 592px;
     height: 350px;
     text-align: center;
 }
-
 .features-options h4 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #373867;
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
-    text-align: center;
-    margin-bottom: 24px;
-    color: #373867;
 }
-
 .features-options img {
-    background-color: rgba(170, 206, 155, 0.3);
     padding: 12px;
-    border-radius: 20px;
     width: 232px;
     height: 232px;
+    background-color: #aace9b4d;
+    border-radius: 20px;
+}
+#reasons {
+    position: relative;
+    top: 135px;
+    height: 1016px;
+}
+#reasons h3 {
+    margin: 0 0 0 296px;
+    color: #373867;
+    font-weight: 700;
+    font-size: 40px;
+}
+#reasons article{
+    display: inline-block;
+    margin: 100px 0 0 90px;
+    width: 480px;
+    height: 150px; 
+}
+.reasons-options{
+    display: inline-block;
+    width: 50%;
+}
+.reasons-options img{
+    height: 118px;
+    background-color: #aace9b4d;
+}
+.reasons-options h4 {
+    margin: 0 0 0 28px;
+    width: 297px;
+    color: #373867;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+.reasons-options p{
+    margin: 41px 0 0 50px; 
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #373867;
+    width: 355px;
 }
 
-.reasons {
-    position: relative;
-    height: 982px;
-    top: 135px;
+
+
+
+
+
+
+
+
+
+footer{
+    margin-left: 340px;
 }
