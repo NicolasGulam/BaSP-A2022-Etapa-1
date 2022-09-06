@@ -256,7 +256,7 @@ main{
 }
 #reasons article{
     display: inline-block;
-    margin: 100px 0 0 90px;
+    margin: 117px 0 0 118px;
     width: 480px;
     height: 150px; 
 }
@@ -265,8 +265,9 @@ main{
     width: 50%;
 }
 .reasons-options img{
-    height: 118px;
-    background-color: #aace9b4d;
+    position: relative;
+    height: 99px;
+    margin: 40px 10px 0 20px;
 }
 .reasons-options h4 {
     margin: 0 0 0 28px;
@@ -277,12 +278,26 @@ main{
     line-height: 35px;
 }
 .reasons-options p{
-    margin: 41px 0 0 50px; 
+    margin: 31px 0 0 44px;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     color: #373867;
     width: 355px;
+}
+#reason-leadership div{
+    position: absolute;
+}
+#reason-leadership img{
+    margin: 40px 10px 0 20px;
+}
+.img-background{
+    position: absolute;
+    width: 131px;
+    height: 131px;
+    transform: rotate(45deg);
+    background: rgba(170, 206, 155, 0.3);
+    margin: 26px 0 0 2px;
 }
 #contact {
     position: relative;
@@ -560,7 +575,7 @@ input:checked + .slider:before {
     box-sizing: border-box;
     width: 363px;
     height: 251px;
-    top: 760px;
+    top: 708px;
     left: 862px;
     border: 0.427652px solid #000000;
     box-shadow: inset 0px 3.42121px 6.84243px rgba(0, 0, 0, 0.25);
