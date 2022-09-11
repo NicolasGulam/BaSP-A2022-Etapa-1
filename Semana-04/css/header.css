@@ -1,31 +1,27 @@
 .header {
     position: fixed;
-    background-color: #373867;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 91px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #373867;
     z-index: 10;
 }
 .header h1{
-    color: #479679;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 60px;
-    margin-right: auto;
-    line-height: 70px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #479679;
 }
-.header img{
-    padding: 12px 26px;
-    margin-right: auto;
-}
-.header img{
-    padding: 12px 26px;
+.header .logo-header{
     width: 60px;
     height: 65px;
+    padding: 12px 6px;
 }
-
+.header button img{
+    padding: 24px 22px 24px 0;
+}
 
 
 .nav .nav-bar{
@@ -60,4 +56,9 @@
                 0    1px 0 #fff,
                 -1px  1px 0 #fff,
                 -1px  0   0 #fff;
+}
+@media only screen and (max-width: 768px){
+    .nav{
+        display: none;
+    }
 }

@@ -4,6 +4,8 @@ html{
 body{
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+    font-style: normal;
+    color: #373867;
 }
 .buttons-navs{
     background: none;
@@ -13,4 +15,10 @@ body{
     font: inherit;
     cursor: pointer;
     outline: inherit;
+}
+main{
+    z-index: 2;
+}
+.sections{
+    border-bottom: 2px solid #000;
 }
