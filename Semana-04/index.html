@@ -68,28 +68,24 @@
         </aside>
         <main>
             <section class="sections">
-                <div id="home">
+                <div id="home" class="home-section">
                     <div class="welcome-background">
                         <h2>
                             WELCOME
                         </h2>
                     </div>
-                    <div>
-                        <img src="assets/img/main.jpg" alt="mainImage">
-                    </div>
-                    <div>
-                        <p class="welcome-p-1">
+                    <div class="welcome-image-text">
+                        <p class="img-text">
                             “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA. 
-                        </p>
-                        <p class="welcome-p-2">
                             This system will allow them to efficiently manage their proyects, schedule flow, 
                             selected work teams and much more.
                         </p>
+                        <img src="assets/img/main.jpg" alt="mainImage" class="img-text">
                     </div>
                 </div>
             </section>
             <section class="sections">
-                <div id="features">
+                <div id="features" class="features-section">
                     <h3>
                         Application Features
                     </h3>
@@ -126,7 +122,7 @@
                 </div>
             </section>
             <section class="sections">
-                <div id="reasons">
+                <div id="reasons" class="reasons-section">
                     <h3>
                         Why you should use Trackgenix?
                     </h3>
@@ -153,9 +149,9 @@
                                 </p>
                             </div>
                         </article>
-                        <article class="reasons-options" id="reason-leadership">
+                        <article class="reasons-options">
                             <img src="assets/img/leadership-and-team-mang.jpg" alt="leaderAndTeamMang">
-                            <div id="reason-leadership">
+                            <div>
                                 <h4>
                                     Leadership and team management
                                 </h4>
@@ -181,7 +177,7 @@
                 </div>
             </section>
             <section class="sections">
-                <div id="contact">
+                <div id="contact" class="contact-form">
                     <h3>
                         Inscription Form
                     </h3>
@@ -201,83 +197,80 @@
                             <option value="merchandising">
                                 Merchandising
                             </option>
-                        </select> 
-                        <label for="emailMe" class="check">
-                            <input id="emailMe" type="checkbox" >
-                            <span class="slider round"></span>
-                        </label>
-                        <label id="email-text">
-                            Email me a copy
-                        </label>
-                        <label for="imAHuman" class="check">
-                            <input id="imAHuman" type="checkbox" required>
-                            <span class="slider round"></span>
-                        </label>
-                        <label id="human-text">
-                            I am a human and I accept terms of service
-                        </label>
+                        </select>
+                        <div class="check">
+                            <label for="emailMe">
+                                <input id="emailMe" type="checkbox">
+                                Email me a copy
+                            </label>
+                            <label for="imAHuman" class="check">
+                                <input id="imAHuman" type="checkbox" required>
+                                I am a human and I accept terms of service
+                            </label>
+                        </div>
+                        
                         <label class="text-area">
                             Text
                         </label>
-                        <textarea name="message" placeholder="Enter your text here..." id="form-message" required>
-                        </textarea>
-                        <button class="buttons-navs"><input type="button" name="send" id="send-button" value="Send">
-                        </button>
+                        <textarea name="message" placeholder="Enter your text here..." id="form-message" 
+                        required></textarea>
+                        <div class="send-button">
+                            <button class="buttons-navs"><input type="button" name="send" id="send-button" value="Send">
+                            </button>
+                        </div>
                     </form>
                 </div>
             </section>
             <section class="sections">
-                <div id="history">
-                    <h3>
-                        Company’s Mission
-                    </h3>
-                    <img src="assets/img/logo.ico" alt="logo" class="history-logo">
-                    <h4 class="h4-mission-1">
+                <div id="history" class="history-section">
+                    <div class="comp-mission">
+                        <h3>
+                            Company’s Mission
+                        </h3>
+                        <img src="assets/img/logo.ico" alt="logo" class="history-logo">
+                    </div>
+                    <h4 class="h4-mission" id="mission-1">
                         Where we started;
                     </h4>
-                    <h4 class="h4-mission-2">
+                    <h4 class="h4-mission" id="mission-2">
                         where we are headed
                     </h4>
-                    <p class="mission-p1">
+                    <div class="mission-texts">
+                        <p class="mission-p1">
                         Make time your ally; make puntuality the difference
-                    </p>
-                    <p class="mission-p2">
-                        Our mission is to allow workers all over the world to reach their full potential.
-                    </p>
-                    <p class="mission-p3">
-                        Our goal is to bring more power to start-ups through top-notch and user-friendly time-tracking 
-                        webapps, easily accessible through any device.
-                    </p>
-                    <p class="mission-p4">
-                        We believe in integrity, honesty, passion for our client’s ideas and communication.
-                    </p>
+                        </p>
+                        <p class="mission-p2">
+                            Our mission is to allow workers all over the world to reach their full potential.
+                            Our goal is to bring more power to start-ups through top-notch and user-friendly time-tracking 
+                            webapps, easily accessible through any device.
+                            We believe in integrity, honesty, passion for our client’s ideas and communication.
+                        </p>
+                    </div>
                     <h4 class="say-about-us-h4">
                         Hear what they say about us
                     </h4>
                     <div class="customer">
-                        <p class="customer-p5">
+                        <p class="customer-p">
                             “TrackGenix allows us to effortlessly and easily track total workflow in each of our 
                             projects and make a balanced distribution of team workload” 
-                        </p>
-                        <p class="customer-p6">
                             -Satisfied Customer
                         </p>
                     </div>
                     <h4 class="about-us-h4">
                         About Us
                     </h4>
-                    <p class="about-us-p7">
-                        RadiumRocket developed TrackGenix as a software solution for optimal time-tracking and project
-                        management as a request for one of its most trusted clients, GigaTech Software Solutions, in 
-                        late 2021, and swiftly became one of the most requested services in all of the million-dollar 
-                        South American productivity industry.
-                    </p>
-                    <p class="about-us-p8">
-                        RadiumRocket are a group of passionate people fond of the latest cutting edge technologies in 
-                        software development. They position ourselves at your side through all the process of 
-                        development being responsible and co-workers with you to successfully get your product moving.
-                    </p>
-                    <img src="assets/img/history.jpg" alt="historyImage" class="history-image">
+                    <div class="about-us-img-text">
+                        <p class="about-us-p">
+                            RadiumRocket developed TrackGenix as a software solution for optimal time-tracking and project
+                            management as a request for one of its most trusted clients, GigaTech Software Solutions, in 
+                            late 2021, and swiftly became one of the most requested services in all of the million-dollar 
+                            South American productivity industry.
+                            RadiumRocket are a group of passionate people fond of the latest cutting edge technologies in 
+                            software development. They position ourselves at your side through all the process of 
+                            development being responsible and co-workers with you to successfully get your product moving.
+                        </p>
+                        <img src="assets/img/history.jpg" alt="historyImage" class="history-image">
+                    </div>
                 </div>
             </section>
             <section class="sections">
