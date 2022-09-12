@@ -216,7 +216,7 @@ main{
     scroll-margin-top: 200px;
 }
 #features h3 {
-    margin: 0 0 49px 100px;
+    text-align: center;
     color: #373867;
     font-weight: 700;
     font-size: 40px;
