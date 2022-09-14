@@ -1,50 +1,53 @@
-.aside .aside-bar{
+.aside{
+    display: none;
+}
+.aside{
+    flex-direction: column;
+    align-items: center;
     position: fixed;
-    width: 253px;
+    width: 30%;
     height: 100%;
     background-color: #EBECF0;
     margin-top: 91px;
     z-index: 50;
 }
 .aside input{
-    width: 236px;
+    width: 218px;
     height: 30.49px;
-    margin-left: 8px;
-    margin-top: 21px;
-    background: #FFFFFF;
-    border-radius: 3.418px;
+    margin: 21px 0 0 8px;
+    border-radius: 3.42px;
+    background: url("../assets/img/search.png") no-repeat right;
+    background-size: 20px;
 }
-.aside .aside-bar form .buttons-navs{
-    position: absolute;
-    top: 31.25px;
-    right: 25.24px;
+.aside form .buttons-navs{
     color: #373867;
     opacity: 0.5;
 }
-.aside .aside-bar .menu-p{
-    position: absolute;
-    margin-left: 92px;
+.aside .menu-p{
     margin-top: 17.51px;
     font-weight: 700;
-    font-size: 19.3686px;
-    color: #373867;
+    font-size: 1.211rem;
 }
-.aside-bar ul{
-    margin: 62px 45px 0;
+.aside ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 62px;
 }
-.aside-bar ul li{
-    width: 142px;
+.aside ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 46px;
+    width: 142px;
     border-bottom: 1px solid #000;
 }
-.aside-bar ul li a{
-    position: relative;
-    top: 15px;
+.aside ul li a{
     color: #479679;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
-.aside .aside-bar ul li a:hover{
+.aside  ul li a:hover{
     text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
                 -1px -1px 0 #fff,
                 0   -1px 0 #fff,
@@ -55,24 +58,23 @@
                 -1px  1px 0 #fff,
                 -1px  0   0 #fff;
 }
+.aside-img-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 229px;
+}
 .aside .developed-p{
-    position: absolute;
-    width: 236px;
-    height: 13px;
-    left: 12px;
-    top: 710px;
-    font-weight: 400;
-    font-size: 11px;
+    font-size: 0.69rem;
 }
 .aside .logo-aside{
-    position: absolute;
     width: 66px;
     height: 70px;
-    top: 609px;
-    left: 95px;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 768px){
     .aside{
-        display: none;
+        display: flex;
+        max-width: 320px;
     }
 }

@@ -1,5 +1,5 @@
 .redes{
-    margin-top: 90px;
+    margin-top: 200px;
     width: 100%;
     height: 74px;
     background: #373867;
@@ -19,6 +19,6 @@
 }
 @media only screen and (min-width: 768px){
     footer{
-        margin-left: 253px;
+        margin-left: min(30%, 320px);
     }
 }

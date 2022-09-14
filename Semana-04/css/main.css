@@ -1,8 +1,12 @@
+main{
+    position: relative;
+    top: 91px;
+    z-index: 2;
+}
 .home-section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 91px;
     background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229,
      242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     scroll-margin-top: 200px;
@@ -25,6 +29,7 @@
     align-items: center;
     flex-wrap: wrap-reverse;
     padding: 2rem;
+    margin-bottom: 65px;
 }
 .img-text{
     padding: clamp(0rem, 50%, 1rem);
@@ -58,10 +63,10 @@
     margin: 1rem auto;
 }
 .features-options h4{
+    padding: 1rem;
+    text-align: center;
     font-weight: 700;
     line-height: 16px;
-    text-align: center;
-    padding: 1rem;
 }
 .features-options{
     width: clamp(100px, calc(50% - 5rem),240px);
@@ -69,6 +74,7 @@
 .features-row img{
     width: 100%;
     padding: 12px;
+    margin-bottom: 65px;
 }
 .reasons-section{
     margin-top: 60px;
@@ -86,8 +92,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
-    margin-top: 77px;
+    margin: 77px 0 60px 10px;
 }
 .reasons-options{
     display: flex;
@@ -115,10 +120,10 @@
     line-height: 35px;
 }
 .reasons-options p{
-    margin: 12px 44px 0 0;
-    font-size: 0.78rem;
-    line-height: 23px;
     width: 242px;
+    margin: 12px 44px 0 0;
+    font-size: 0.85rem;
+    line-height: 23px;
 }
 .contact-form {
     margin-top: 47px;
@@ -135,9 +140,9 @@
     margin: 27px 10px 0 10px;
 }
 .contact-form .texts{
-    width: clamp(358px, 50%, 573px);
-    margin-top: 20px;
+    width: clamp(358px, 98%, 750px);
     height: 37px;
+    margin-top: 20px;
     border: 1px solid #373867;
     border-radius: 4px;
 }
@@ -164,8 +169,7 @@
 }
 #form-message{
     height: 350px;
-    width: clamp(346px, 98%, 1185px);
-    top: 80px;
+    width: clamp(346px, 98%, 1511px);
     border-radius: 4px;
     resize: none;
 }
@@ -178,7 +182,7 @@
     padding: 15px 32px;
     background-color: #479679;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
 }
 .history-section{
@@ -208,11 +212,11 @@
     display: inline-block;
     margin: 20px 0 0 10px;
     font-size: 1.48rem;
+    font-weight: 700;
     line-height: 28px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: underline;
-    font-weight: 700;
 }
 #mission-1{
     text-decoration-color: #8FD5C8;
@@ -234,7 +238,7 @@
     margin-top: 15px;
 }
 .mission-p2{
-    width: clamp(362px, 50%, 1209px);
+    width: clamp(362px, 60%, 1209px);
     font-size: 1.172rem;
     line-height: 26px;
     text-align: center;
@@ -246,7 +250,6 @@
     align-items: center;
 }
 .say-about-us-h4{
-    width: 609px;
     width: clamp(450px, 50%, 609px);
     margin: 43px 0 0 8px;
     font-weight: 600;
@@ -258,11 +261,11 @@
     width: clamp(323px, 94%, 1134px);
     height: 21px;
     padding: 20px 0 0 11px;
-    color: rgba(0, 0, 0, 0.8);
     font-style: italic;
     font-weight: 400;
     font-size: 1.08rem;
     line-height: 20px;
+    color: rgba(0, 0, 0, 0.8);
 }
 .customer{
     width: clamp(364px, 98%, 1240px);
@@ -270,17 +273,17 @@
     margin-left: 16px;
     margin-top: 20px;
     background: rgba(217, 217, 217, 0.2);
-    border-radius: 5.98712px;
+    border-radius: 6px;
 }
 .about-us-h4{
     margin: 88px 0 15px 21px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .about-us-p{
     width: clamp(322px, 70%, 769px);
     margin: 0 15px 15px 49px;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 26px;
 }
 .history-image{
@@ -297,14 +300,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 #products {
     scroll-margin-top: 200px;
     color: #000;
 }
 #products h3{
-    margin: 36px 0 30px 38px;
-    font-size: 30px;
+    margin: 60px 0 30px 38px;
+    font-size: 1.875rem;
     line-height: 36px;
     text-decoration: underline;
 }
@@ -321,6 +325,7 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    justify-content: center;
     width: 592px;
     height: 585px;
     text-align: center;
@@ -415,7 +420,9 @@
     text-decoration: underline;
 }
 .support-options{
-
+    display: block;
+    justify-content: space-around;
+    align-items: center;
 }
 .support-img-text{
     display: flex;
@@ -425,8 +432,8 @@
     text-align: center;
 }
 .support-options img{
-    width: clamp(296.9px, 50%, 460px);
-    height: clamp(195.65px, 50%, 288px);
+    width: 460px;
+    height: 300px;
     padding: 12px;
     border-radius: 20px;
     box-sizing: border-box;
@@ -435,7 +442,7 @@
 .support-options p{
     width: 400px;
     font-weight: 500;
-    font-size: 23px;
+    font-size: 1.438rem;
     line-height: 28px;
 }
 #support .tutorial-videos h3{
@@ -448,7 +455,7 @@
     margin: 49px 0 0 56px;
     list-style: decimal;
     font-style: italic;
-    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 31px;
 }
 .videos-titles{
@@ -470,8 +477,8 @@
     justify-content: center;
     align-items: center;
     width: 388px;
-    margin-top: 63px;
     height: 116px;
+    margin-top: 63px;
     background: #98220D;
     box-shadow: 0px 4px 2px rgb(0 0 0 / 25%);
     border-radius: 30px;
@@ -483,7 +490,13 @@
 }
 @media only screen and (min-width: 768px){
     main{
-        margin-left: 253px;
-        margin-top: 155px;
+        top: 147px;
+        margin-left: min(30%, 320px);
+        width: max(70%, (100% - 320px) );
+    }
+}
+@media only screen and (min-width: 1200px){
+    .support-options{
+        display: flex;
     }
 }
