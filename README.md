@@ -14,6 +14,7 @@ Trackgenix is a revolutionary system designed by GigaTech Software Solutions S.A
   * [Week 02 📅](#week-02)
   * [Week 03 📅](#week-03)
   * [Week 04 📅](#week-04)
+  * [Week 05 📅](#week-05)
 ## Try it out
 Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 ## Description
@@ -65,4 +66,9 @@ pushing every version of the progress we do. For this week we had the challenge 
 flexbox or grid making the landing more difficult to order.
 ### Week 04
 In the fourth week, we replicated the landing page of the screenflow of week 01 that works in mobile, tablet and desktop.
-The objective was to use Flexbox as the main tool for the creation of the Responsive Design following the concept of Mobile First. 
+The objective was to use Flexbox as the main tool for the creation of the Responsive Design following the concept of Mobile First.
+### Week 05
+In the week number 5:
+On the one hand, we had some practical exercises of Javascript applying the concepts learned.
+On the other hand, we had to modify and correct the files of week 4 that was about the responsive design of the landing page.
+Try them out here: https://user.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
