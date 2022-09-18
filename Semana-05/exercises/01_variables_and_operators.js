@@ -10,7 +10,7 @@ num2 = 22;
 suma = num1 + num2;
 console.log('The sum of both numbers is: ' + suma);
 
-/* b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.*/
+// b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.
 
 console.log('-Exercise 1.b:');
 var myName, mySurname, fullName;
