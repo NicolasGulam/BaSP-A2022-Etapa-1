@@ -8,7 +8,7 @@ var num1, num2, suma;
 num1 = 10;
 num2 = 22;
 suma = num1 + num2;
-console.log('The sum of both numbers is: ' + suma);
+console.log('The result of both numbers is: ' + suma);
 
 // b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.
 

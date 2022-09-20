@@ -9,7 +9,7 @@ function addition(num1, num2){
 }
 num1 = Math.floor(Math.random()*(0-100)+100);
 num2 = Math.floor(Math.random()*(0-100)+100);
-console.log(addition(num1, num2));
+console.log("The result of both numbers is:", addition(num1, num2));
 
 /* b. A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número; 
 de no ser un número, mostrar una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como 
@@ -25,8 +25,8 @@ function additionWithValidation(num1, num2){
     }
 }
 num2 = Math.floor(Math.random()*(0-100)+100);
-console.log('The sum with validation if one of the parameters has an error: ', additionWithValidation('ab', num2));
-console.log('The sum with validation if one of the parameters without an error: ', additionWithValidation(5, num2));
+console.log('The result with validation if one of the parameters has an error: ', additionWithValidation('ab', num2));
+console.log('The result with validation if one of the parameters without an error: ', additionWithValidation(5, num2));
 
 /* c. Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva verdadero si es un 
 número entero.*/
@@ -68,5 +68,26 @@ additionNumberWithValidation(5, 8));
 que todo siga funcionando igual*/
 
 console.log('-Exercise 6.e:');
-
-console.log();
+function lastAddition(num1, num2) {
+    num1 = lastValidate(num1);
+    num2 = lastValidate(num2);
+    return num1+num2;
+}
+function lastValidate(num) {
+    if (typeof num === 'number'){
+        if (!validateInteger(num)){
+            alert('Error, one or both numbers are not an Integer');
+            num = Math.round(num);
+            return num;
+        } else{
+            return num;
+        }
+    } else{
+        alert('One of the parameters has an error');
+        return NaN;
+    }
+}
+console.log('The result of the sum of 17.5 and 10 with validation with error is: ', 
+lastAddition(17.5, 10));
+console.log('The result of the sum of 5 and 8 with validation without error is:', 
+lastAddition(5, 8));
