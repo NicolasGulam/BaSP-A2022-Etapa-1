@@ -16,7 +16,7 @@
     height: 30.49px;
     margin: 21px 0 0 8px;
     border-radius: 3.42px;
-    background: url("../assets/img/search.png") no-repeat right;
+    background: url("../assets/img/search.png") #fff no-repeat right;
     background-size: 20px;
 }
 .aside form .buttons-navs{

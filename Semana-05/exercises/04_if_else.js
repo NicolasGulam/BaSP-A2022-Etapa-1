@@ -7,9 +7,9 @@ console.log('-Exercise 4.a:');
 var randomNumber = Math.random(0, 1);
 randomNumber = Number(randomNumber.toFixed(2));
 if(randomNumber >= 0.5){
-    alert('Greater than 0,5' + ' the number is: ' + randomNumber);
+    alert('Greater than 0,5' + ' and the number is: ' + randomNumber);
 } else{
-    alert('Lower than 0,5' + ' the number is: ' + randomNumber);
+    alert('Lower than 0,5' + ' and the number is: ' + randomNumber);
 }
 
 /* b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:

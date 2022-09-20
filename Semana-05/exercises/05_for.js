@@ -7,7 +7,7 @@ console.log('-Exercise 5.a:');
 var fruits = ["banana", "apple", "pear", "watermelon", "orange"];
 for (var index = 0; index < fruits.length; index++) {
     var element = fruits[index];
-    alert(element);
+    alert('The fruit ' + element + ' is the index ' + index);
 }
 
 /* b. Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra 
@@ -16,7 +16,7 @@ modificada.*/
 console.log('-Exercise 5.b:');
 for (var index = 0; index < fruits.length; index++) {
     var element = fruits[index].substring(0,1).toUpperCase() + fruits[index].substring(1).toLowerCase();
-    alert(element);
+    alert('The fruit with the first letter with Upper Case: ' + element + ' is the index ' + index);
 }
 
 /* c. Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un 

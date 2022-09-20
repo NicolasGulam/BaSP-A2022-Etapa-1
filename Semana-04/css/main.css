@@ -18,7 +18,7 @@ main{
 .welcome-background{
     width: 241px;
     height: 63px;
-    margin-top: 27px;
+    margin-top: 80px;
     background: rgba(170, 206, 155, 0.53);
     border: 2px solid #000000;
     border-radius: 20px;
@@ -29,7 +29,7 @@ main{
     align-items: center;
     flex-wrap: wrap-reverse;
     padding: 2rem;
-    margin-bottom: 65px;
+    margin-bottom: 180px;
 }
 .img-text{
     padding: clamp(0rem, 50%, 1rem);
@@ -140,7 +140,7 @@ main{
     margin: 27px 10px 0 10px;
 }
 .contact-form .texts{
-    width: clamp(358px, 98%, 750px);
+    width: clamp(358px, 98%, 660px);
     height: 37px;
     margin-top: 20px;
     border: 1px solid #373867;
@@ -152,6 +152,11 @@ main{
     margin: 20px 0 100px 0;
     border: 1px solid #373867;
     border-radius: 4px;
+    background: url("../assets/img/arrow-down.png") no-repeat;
+    background-position: calc(100% - 0.75rem) center;
+    -moz-appearance:none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 .check{
     display: flex;
@@ -492,7 +497,7 @@ main{
     main{
         top: 147px;
         margin-left: min(30%, 320px);
-        width: max(70%, (100% - 320px) );
+        width: max(70%, (100% - 320px));
     }
 }
 @media only screen and (min-width: 1200px){

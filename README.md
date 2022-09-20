@@ -1,5 +1,7 @@
 # Trackgenix 
-Trackgenix is a revolutionary system designed by GigaTech Software Solutions S.A. It´s a software solution for optimal time-tracking and project management as a request for one of its most trusted clients in late 2021, and swiftly became one of the most requested services in all of the million-dollar South American productivity industry.
+Trackgenix is a revolutionary system designed by GigaTech Software Solutions S.A. It´s a software solution for optimal 
+time-tracking and project management as a request for one of its most trusted clients in late 2021, and swiftly became 
+one of the most requested services in all of the million-dollar South American productivity industry.
 ## General index 📍
   * [Try it out ✨](#try-it-out)
   * [Description ℹ️](#description)
@@ -21,8 +23,10 @@ Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etap
 This system will allow our clients to efficiently manage their proyects, schedule flow, selected work teams, manage 
 hours log, do resource management, make reports, have multiple roles and much more.
 ## Reasons to use our product
-1) Your projects will be more productive using better Focus, Time Management, Organization and Efficiency, Lead a group of people in accomplishing a task or common goal. 
-2) Effective team management involves supporting, communicating with and uplifting team members so they perform to the best of their abilities and continue to grow as professionals.
+1) Your projects will be more productive using better Focus, Time Management, Organization and Efficiency, Lead a group 
+of people in accomplishing a task or common goal. 
+2) Effective team management involves supporting, communicating with and uplifting team members so they perform to the 
+best of their abilities and continue to grow as professionals.
 3) Keep track of specs, changes, requests, results, and versions.
 4) Make better decisions for your business.
 ## About us
@@ -37,11 +41,14 @@ This project uses at the moment the next technologies:
 ✔️ GitHub
 ✔️ Visual Studio Code
 ✔️ HTML
+✔️ CSS
+✔️ Javascript
 ```
 ## How to Open
 ```
 1- access to the folder 
-    "Semana-02"
+    "Semana-04" if you want to open Trackgenix app.
+    Or open "Semana-05" if you want to open Javascript exercises.
 2- open the file 
     "index.html" on your browser
 ```
@@ -65,10 +72,13 @@ In this third week, we had to do the landing page in a pixel perfect way with CS
 pushing every version of the progress we do. For this week we had the challenge of not using anything related to 
 flexbox or grid making the landing more difficult to order.
 ### Week 04
-In the fourth week, we replicated the landing page of the screenflow of week 01 that works in mobile, tablet and desktop.
-The objective was to use Flexbox as the main tool for the creation of the Responsive Design following the concept of Mobile First.
+In the fourth week, we replicated the landing page of the screenflow of week 01 that works in mobile, tablet and 
+desktop.
+The objective was to use Flexbox as the main tool for the creation of the Responsive Design following the concept of 
+Mobile First.
 ### Week 05
 In the week number 5:
 On the one hand, we had some practical exercises of Javascript applying the concepts learned.
-On the other hand, we had to modify and correct the files of week 4 that was about the responsive design of the landing page.
-Try them out here: https://user.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+On the other hand, we had to modify and correct the files of week 4 that was about the responsive design of the landing 
+page.
+Try them out here: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-05/index.html

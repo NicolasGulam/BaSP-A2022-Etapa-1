@@ -17,7 +17,7 @@ var myName, mySurname, fullName;
 myName = 'Nicolás';
 mySurname = 'Gulam';
 fullName = myName + ' ' + mySurname;
-console.log(fullName);
+console.log('Two variables of type String concatenated:' , fullName);
 
 /* c. Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras del string) guardando el 
 resultado de la suma en una 3er variable (utilizar length).*/

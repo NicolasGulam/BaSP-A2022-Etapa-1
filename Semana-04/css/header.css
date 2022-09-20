@@ -29,16 +29,20 @@
     top: 91px;
     height: 55px;
     margin-left: min(30%, 320px);
-    width: max(70%, (100% - 320px) );
+    width: max(70%, (100% - 320px));
     border: 2px solid #000;
     z-index: 15;
+}
+.buttons-border{
+    width: 16.5%;
+    height: 55px;
+    border-right: 2px solid #000;
 }
 .nav-bar ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    margin-right: 30px;
     width: 100%;
 }
 .nav-bar ul li{
@@ -47,7 +51,6 @@
     align-items: center;
 }
 .nav-bar ul li a{
-
     color: #479679;
     font-size: 0.9rem;
     text-decoration: none;
