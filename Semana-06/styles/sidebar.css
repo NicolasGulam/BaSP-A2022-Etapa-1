@@ -1,0 +1,80 @@
+.aside{
+    display: none;
+}
+.aside{
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    background-color: #EBECF0;
+    margin-top: 91px;
+    z-index: 50;
+}
+.aside input{
+    width: 218px;
+    height: 30.49px;
+    margin: 21px 0 0 8px;
+    border-radius: 3.42px;
+    background: url("../assets/img/search.png") #fff no-repeat right;
+    background-size: 20px;
+}
+.aside form .buttons-navs{
+    color: #373867;
+    opacity: 0.5;
+}
+.aside .menu-p{
+    margin-top: 17.51px;
+    font-weight: 700;
+    font-size: 1.211rem;
+}
+.aside ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 62px;
+}
+.aside ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 142px;
+    border-bottom: 1px solid #000;
+}
+.aside ul li a{
+    color: #479679;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.aside  ul li a:hover{
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
+                -1px -1px 0 #fff,
+                0   -1px 0 #fff,
+                1px -1px 0 #fff,
+                1px  0   0 #fff,
+                1px  1px 0 #fff,
+                0    1px 0 #fff,
+                -1px  1px 0 #fff,
+                -1px  0   0 #fff;
+}
+.aside-img-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 229px;
+}
+.aside .developed-p{
+    font-size: 0.69rem;
+}
+.aside .logo-aside{
+    width: 66px;
+    height: 70px;
+}
+@media only screen and (min-width: 768px){
+    .aside{
+        display: flex;
+        max-width: 320px;
+    }
+}
