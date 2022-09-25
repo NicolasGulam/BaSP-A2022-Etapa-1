@@ -1,0 +1,114 @@
+main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 91px;
+    z-index: 2;
+}
+body {
+    --color-primary: #AACE9B;
+    --color-primary-dark: #7dac69;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+}
+.sign-up-container {
+    width: clamp(300px, 50%, 650px);
+    height: 800px;
+    padding: 3rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #DADADA;
+}
+.sign-up-column{
+    display: inline-block;
+}
+.sign-up-form-title {
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.sign-up-form-message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.sign-up-form-message--success {
+    color: var(--color-success);
+}
+.sign-up-form--error {
+    color: var(--color-error);
+}
+.sign-up-form-input-group {
+    margin-bottom: 1rem;
+}
+.sign-up-form-input {
+    width: 90%;
+    padding: 0.75rem;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: #DADADA;
+    transition: background 0.2s, border-color 0.2s;
+}
+.sign-up-form-group-texts{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.sign-up-form-input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+.sign-up-form-input-error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+.sign-up-form-input-error {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+.sign-up-continue-button {
+    display: flex;
+    justify-content: center;
+}
+.sign-up-form-button {
+    margin-top: 55px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background: var(--color-primary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sign-up-form-button:hover {
+    background: var(--color-primary-dark);
+}
+.sign-up-form-button:active {
+    transform: scale(0.98);
+}
+.sign-up-form-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.sign-up-form-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+.sign-up-form-link:hover {
+    text-decoration: underline;
+}
+@media only screen and (min-width: 768px){
+    main{
+        top: 147px;
+        margin-left: min(30%, 320px);
+        width: max(70%, (100% - 320px));
+    }
+}

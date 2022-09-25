@@ -16,11 +16,12 @@
         <link rel="stylesheet" type="text/css" href="../styles/styles.css">
         <link rel="stylesheet" type="text/css" href="../styles/header.css">
         <link rel="stylesheet" type="text/css" href="../styles/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="../styles/sign-up.css">
         <link rel="stylesheet" type="text/css" href="../styles/footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;
-        1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        1,300;1,400;1,500;1,700;1,900&display=swap">
     </head>
 </head>
 <body>
@@ -35,7 +36,7 @@
     </header>
     <aside class="aside">
         <form>
-            <input type="search" class="searchInput" placeholder="Search"/>
+            <input type="text" class="searchInput" placeholder="Search"/>
         </form>
         <p class="menu-p">
             Menu
@@ -53,6 +54,66 @@
             </p>
         </div>
     </aside>
+    <main>
+        <div class="sign-up-container">
+            <form class="sign-up-form" id="sign-up">
+                <h1 class="sign-up-form-title">Sign Up</h1>
+                <div class="sign-up-form-message sign-up-form-error"></div>
+                <div class="sign-up-column">
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Name">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Surname">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="DNI">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Birthday">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Telephone number">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                </div>
+                <div class="sign-up-column">
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Location">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Postal code">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Email">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Password">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                    <div class="sign-up-form-input-group">
+                        <input type="text" class="sign-up-form-input" autofocus placeholder="Repeat Password">
+                        <div class="sign-up-form-input-error"></div>
+                    </div>
+                </div>
+                <p class="sign-up-form-text"></p>
+                <p class="sign-up-form-text"></p>
+                <p class="sign-up-form-text">
+                    Already have an account? <a class="sign-up-form-link" href="../views/login.html" 
+                    id="linkCreateAccount">Sign in</a>
+                </p>
+                <div class="sign-up-continue-button">
+                    <button class="sign-up-form-button buttons-navs" type="submit">Continue</button>
+                </div>
+            </form>
+    </main>
     <footer>
         <article class="redes">
             <ul>
