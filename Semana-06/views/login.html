@@ -22,6 +22,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;
         1,300;1,400;1,500;1,700;1,900&display=swap">
+        <script type="text/javascript" src="../javascript/login.js"></script>
     </head>
 </head>
 <body>
@@ -58,16 +59,19 @@
         <div class="container">
             <form class="form" id="login">
                 <h1 class="form-title">Sign In</h1>
-                <div class="form-message form-error"></div>
-                <div class="form-input-group">
-                    <img src="../assets/img/email.png" alt="email" class="img-input">
-                    <input type="text" class="form-input" autofocus>
-                    <div class="form-input-error"></div>
+                <div class="form-group">
+                    <div class="form-input-group">
+                        <img src="../assets/img/email.png" alt="email" class="img-input">
+                        <input type="text" class="form-input" id="email" name="email" autofocus>
+                    </div>
+                    <p class="form-input-error" id="form-input-error-email">You must use a valid email format.</p>
                 </div>
-                <div class="form-input-group">
-                    <img src="../assets/img/password.png" alt="password" class="img-input">
-                    <input type="text" class="form-input" autofocus>
-                    <div class="form-input-error"></div>
+                <div class="form-group">
+                    <div class="form-input-group">
+                        <img src="../assets/img/password.png" alt="password" class="img-input">
+                        <input type="password" class="form-input" id="password" name="password" autofocus>
+                    </div>
+                    <p class="form-input-error" id="form-input-error-pass">It must contain only letters and numbers.</p>
                 </div>
                 <div class="form-group-texts">
                     <p class="form-text">
@@ -79,9 +83,13 @@
                     Don't have an account? <a class="form-link" href="../views/sign-up.html" id="linkCreateAccount">
                         Sign up</a>
                 </p>
+                <div class="form-message" id="form-message">
+                    <p>Error: please fill the form correctly</p>
+                </div>
                 <div class="continue-button">
                     <button class="form-button buttons-navs" type="submit">Continue</button>
                 </div>
+                <p class="form-message-success" id="form-message-success">Form sent successfully</p>
             </form>
     </main>
     <footer>

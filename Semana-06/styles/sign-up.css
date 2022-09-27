@@ -13,16 +13,21 @@ body {
     --color-success: #4bb544;
     --border-radius: 4px;
 }
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+}
 .sign-up-container {
     width: clamp(300px, 50%, 650px);
-    height: 800px;
     padding: 3rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
     background: #DADADA;
 }
-.sign-up-column{
-    display: inline-block;
+.sign-up-column-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .sign-up-form-title {
     margin-bottom: 4rem;
@@ -33,19 +38,9 @@ body {
     text-align: center;
     margin-bottom: 1rem;
 }
-.sign-up-form-message--success {
-    color: var(--color-success);
-}
-.sign-up-form--error {
-    color: var(--color-error);
-}
-.sign-up-form-input-group {
-    margin-bottom: 1rem;
-}
 .sign-up-form-input {
-    width: 90%;
     padding: 0.75rem;
-    margin-left: 5px;
+    width: 90%;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #000;
@@ -53,23 +48,34 @@ body {
     background: #DADADA;
     transition: background 0.2s, border-color 0.2s;
 }
+.sign-up-form--success {
+    outline: 2px solid var(--color-success);
+}
+.sign-up-form--error {
+    outline: 2px solid var(--color-error);
+}
+.sign-up-form-input-group {
+    width: clamp(200px, 50%, 300px);
+    margin-bottom: 2rem;
+}
 .sign-up-form-group-texts{
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 }
 .sign-up-form-input:focus {
-    border-color: var(--color-primary);
     background: #ffffff;
 }
 .sign-up-form-input-error {
-    color: var(--color-error);
-    border-color: var(--color-error);
-}
-.sign-up-form-input-error {
+    display: none;
+    width: 190px;
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: var(--color-error);
+    border-color: var(--color-error);
+}
+.sign-up-form-input-error-active {
+	display: block;
 }
 .sign-up-continue-button {
     display: flex;
