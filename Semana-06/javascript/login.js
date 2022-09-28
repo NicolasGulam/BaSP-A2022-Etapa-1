@@ -30,9 +30,8 @@ window.onload = function(){
         } else if (e.target.name == 'password') {
             passValue = (e.target.value).toLowerCase();
             for(var i = 0; i < e.target.value.length;i++) {
-                if(passValue.length >= 8 && ((passValue.charCodeAt(i) >= 48 && 
-                passValue.charCodeAt(i) <= 57) || (passValue.charCodeAt(i) >= 97 && 
-                passValue.charCodeAt(i) <= 122))) {
+                if((passValue.charCodeAt(i) >= 48 && passValue.charCodeAt(i) <= 57) || (passValue.charCodeAt(i) >= 97 && 
+                passValue.charCodeAt(i) <= 122)) {
                     password.classList.remove('form--error');
                     password.classList.add('form--success');
                     errorMessagePass.classList.remove('form-message-active');
@@ -52,27 +51,25 @@ window.onload = function(){
             };
         };
     };
-    inputs.forEach((input) => {
+    inputs.forEach(function(input){
         input.addEventListener('keyup', validarFormulario);
         input.addEventListener('blur', validarFormulario);
     });
-    
     function submitFunction(e){
         e.preventDefault();
-        alert(email.value + password.value);
         if(emailChecked == true && passChecked == true){
+            alert(' The email is: ' + email.value + '\n' + ' The password is: ' + password.value);
             form.reset();
             document.getElementById('form-message-success').classList.add('form-message-success-active');
+            document.getElementById('form-message').classList.remove('form-message-error-active');
             password.classList.remove('form--success');
             email.classList.remove('form--success');
-            setTimeout(() => {
+            setTimeout(deleteMessage, 5000);
+            function deleteMessage() {
                 document.getElementById('form-message-success').classList.remove('form-message-success-active');
-            }, 5000);
+            }
         } else {
-            document.getElementById('form-message').classList.add('form-message-success-active');
-            setTimeout(() => {
-                document.getElementById('form-message').classList.remove('form-message-success-active');
-            }, 5000);
+            document.getElementById('form-message').classList.add('form-message-error-active');
         }
     }
     form.addEventListener('submit', submitFunction);

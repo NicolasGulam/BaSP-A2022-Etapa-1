@@ -172,17 +172,56 @@ main{
     font-weight: 800;
     line-height: 38px;
 }
-#form-message{
+.form-message{
     height: 350px;
     width: clamp(346px, 98%, 1511px);
     border-radius: 4px;
     resize: none;
 }
+.contact-form-input-error {
+    display: none;
+    margin: 16px 0 16px 20px;
+    font-size: 1rem;
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+.contact-form-input-error-active {
+	display: block;
+}
+.contact-form--success {
+    outline: 2px solid var(--color-success);
+}
+.contact-form--error {
+    outline: 2px solid var(--color-error);
+}
 .send-button{
     display: flex;
     justify-content: center;
 }
-#send-button{
+.contact-form-message{
+    display: none;
+    margin-top: 30px;
+    height: 45px;
+	line-height: 45px;
+    text-align: center;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+}
+.contact-form-message-success {
+    display: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-success);
+}
+.contact-form-message-success-active {
+    display: block;
+}
+.contact-form-message-error-active {
+    display: block;
+}
+.button-submit{
     margin: 25px 0;
     padding: 15px 32px;
     background-color: #479679;

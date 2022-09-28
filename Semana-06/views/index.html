@@ -21,6 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;
         1,300;1,400;1,500;1,700;1,900&display=swap">
+        <script type="text/javascript" src="../javascript/contact.js"></script>
     </head>
     <body>
         <header>
@@ -179,10 +180,14 @@
                     <h3>
                         Inscription Form
                     </h3>
-                    <form>
-                        <input type="text" placeholder="Name" class="texts">
-                        <input type="text" placeholder="Email" class="texts">
-                        <select name="contactArea" class="contact-area">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Name" class="texts" id="name" name="name">
+                        <p class="contact-form-input-error" id="form-input-error-name">Only letters and must have 
+                            more than 3 letters.</p>
+                        <input type="text" placeholder="Email" class="texts" id="email" name="email">
+                        <p class="contact-form-input-error" id="form-input-error-email">Must have a valid email 
+                            format.</p>
+                        <select name="contactArea" class="contact-area" id="area" name="area" required>
                             <option value="" hidden selected>
                                 Choose Contact Area
                             </option>
@@ -202,17 +207,26 @@
                                 Email me a copy
                             </label>
                             <label for="imAHuman" class="check">
-                                <input id="imAHuman" type="checkbox">
+                                <input id="imAHuman" type="checkbox" id="terms" name="terms" required>
                                 I am a human and I accept terms of service
                             </label>
                         </div>
                         <label class="text-area">
                             Text
                         </label>
-                        <textarea name="message" placeholder="Enter your text here..." id="form-message"></textarea>
+                        <textarea name="message" placeholder="Enter your text here..." class="form-message" 
+                        id="message" name="message"></textarea>
+                        <p class="contact-form-input-error" id="form-input-error-message">Alphanumeric text and 
+                            must have more than 3 letters.</p>
+                        <div class="contact-form-message" id="contact-form-message">
+                            <p>Error: please fill the form correctly</p>
+                        </div>
                         <div class="send-button">
-                            <button class="buttons-navs"><input type="button" name="send" id="send-button" value="Send">
-                            </button>
+                            <button class="buttons-navs"><input type="button" name="send" id="send-button" 
+                                class="button-submit"value="Send"></button>
+                        </div>
+                        <div class="contact-form-message-success" id="contact-form-message-success">
+                            <p>Form sent successfully</p>
                         </div>
                     </form>
                 </div>

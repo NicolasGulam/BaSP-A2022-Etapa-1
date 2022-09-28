@@ -19,7 +19,7 @@ one of the most requested services in all of the million-dollar South American p
   * [Week 05 📅](#week-05)
   * [Week 06 📅](#week-06)
 ## Try it out
-Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
 ## Description
 This system will allow our clients to efficiently manage their proyects, schedule flow, selected work teams, manage 
 hours log, do resource management, make reports, have multiple roles and much more.

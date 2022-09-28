@@ -83,6 +83,7 @@
                         <div class="sign-up-form-input-group">
                             <input type="date" class="sign-up-form-input" autofocus placeholder="Birthday" id="birthday" 
                             name="birthday">
+                            <p class="sign-up-form-input-error" id="form-input-error-birthday">Please add a date</p>
                         </div>
                         <div class="sign-up-form-input-group">
                             <input type="text" class="sign-up-form-input" autofocus placeholder="Telephone number" 
@@ -117,13 +118,13 @@
                                 format.</p>
                         </div>
                         <div class="sign-up-form-input-group">
-                            <input type="text" class="sign-up-form-input" autofocus placeholder="Password" 
+                            <input type="password" class="sign-up-form-input" autofocus placeholder="Password" 
                             id="password" name="password">
                             <p class="sign-up-form-input-error" id="form-input-error-pass">At least 8 characters, 
                                 made up of letters and numbers.</p>
                         </div>
                         <div class="sign-up-form-input-group">
-                            <input type="text" class="sign-up-form-input" autofocus placeholder="Repeat Password" 
+                            <input type="password" class="sign-up-form-input" autofocus placeholder="Repeat Password" 
                             id="pass-repeat" name="pass-repeat">
                             <p class="sign-up-form-input-error" id="form-input-error-pass-repeat">At least 8 characters, 
                                 made up of letters and numbers.</p>
@@ -136,9 +137,13 @@
                     Already have an account? <a class="sign-up-form-link" href="../views/login.html" 
                     id="linkCreateAccount">Sign in</a>
                 </p>
+                <div class="sign-up-form-message" id="sign-up-form-message">
+                    <p>Error: please fill the form correctly</p>
+                </div>
                 <div class="sign-up-continue-button">
                     <button class="sign-up-form-button buttons-navs" type="submit">Continue</button>
                 </div>
+                <p class="sign-up-form-message-success" id="sign-up-form-message-success">Form sent successfully</p>
             </form>
     </main>
     <footer>

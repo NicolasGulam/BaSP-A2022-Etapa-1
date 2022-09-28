@@ -5,14 +5,6 @@ main{
     top: 91px;
     z-index: 2;
 }
-body {
-    --color-primary: #AACE9B;
-    --color-primary-dark: #7dac69;
-    --color-secondary: #252c6a;
-    --color-error: #cc3333;
-    --color-success: #4bb544;
-    --border-radius: 4px;
-}
 .container {
     width: clamp(300px, 50%, 420px);
     padding: 3rem;
@@ -129,6 +121,9 @@ body {
     color: var(--color-success);
 }
 .form-message-success-active {
+    display: block;
+}
+.form-message-error-active {
     display: block;
 }
 @media only screen and (min-width: 768px){

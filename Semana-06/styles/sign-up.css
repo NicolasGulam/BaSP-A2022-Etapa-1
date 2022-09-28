@@ -5,14 +5,6 @@ main{
     top: 91px;
     z-index: 2;
 }
-body {
-    --color-primary: #AACE9B;
-    --color-primary-dark: #7dac69;
-    --color-secondary: #252c6a;
-    --color-error: #cc3333;
-    --color-success: #4bb544;
-    --border-radius: 4px;
-}
 .sign-up-form{
     display: flex;
     flex-direction: column;
@@ -110,6 +102,28 @@ body {
 }
 .sign-up-form-link:hover {
     text-decoration: underline;
+}
+.sign-up-form-message{
+    display: none;
+    margin-top: 30px;
+    height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+}
+.sign-up-form-message-success {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-success);
+}
+.sign-up-form-message-success-active {
+    display: block;
+}
+.sign-up-form-message-error-active {
+    display: block;
 }
 @media only screen and (min-width: 768px){
     main{
