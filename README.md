@@ -18,8 +18,9 @@ one of the most requested services in all of the million-dollar South American p
   * [Week 04 📅](#week-04)
   * [Week 05 📅](#week-05)
   * [Week 06 📅](#week-06)
+  * [Week 07 📅](#week-07)
 ## Try it out
-Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
+Try Trackgenix with GitHub Pages: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html
 ## Description
 This system will allow our clients to efficiently manage their proyects, schedule flow, selected work teams, manage 
 hours log, do resource management, make reports, have multiple roles and much more.
@@ -48,7 +49,7 @@ This project uses at the moment the next technologies:
 ## How to Open
 ```
 1- access to the folder 
-    "Semana-06" if you want to open Trackgenix app.
+    "Semana-07" if you want to open Trackgenix app.
     Or open "Semana-05" if you want to open Javascript exercises.
 2- open the file 
     "index.html" on your browser
@@ -87,3 +88,7 @@ Try them out here: https://nicolasgulam.github.io/BaSP-A2022-Etapa-1/Semana-05/i
 In the sixth week, we had to make the html, css and javascript files of the Log in and Sign Up sections for the 
 Employee, adding all the necessary validations in the inputs. Then, in the case of finishing it, we had to 
 perform the validations in the contact section of the landing.
+### Week 07
+In this week, we had to do in each form an HTTP request that must be made using the Fetch method of Javascript, sending 
+all the data loaded in the form. The request should only be executed if all form validations pass. In the case of one 
+the fields does not meet the validations, the request should not be made.

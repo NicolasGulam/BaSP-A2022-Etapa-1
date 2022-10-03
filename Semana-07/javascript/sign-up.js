@@ -37,84 +37,86 @@ window.onload = function(){
     var signUpPassChecked = false;
     var passRepeatChecked = false;
     var passValue, passRepeatValue;
-    var Success = function(input, error, state) {
+    var success = function(input, error) {
         input.classList.remove('sign-up-form--error');
         input.classList.add('sign-up-form--success');
         error.classList.remove('sign-up-form-input-error-active');
-        state = true;
     }
-    var Error = function(input, error, state) {
+    var error = function(input, error) {
         input.classList.add('sign-up-form--error');
         input.classList.remove('sign-up-form--success');
         error.classList.add('sign-up-form-input-error-active');
-        state = false;
     }
-    var Empty = function(input, error, state) {
+    var empty = function(input, error) {
         input.classList.remove('sign-up-form--error');
         input.classList.remove('sign-up-form--success');
         error.classList.remove('sign-up-form-input-error-active');
-        state = false;
     }
     function validateForm(e) {
         if (e.target.name == 'name') {
             nameValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (nameValue.length > 3 && nameValue.charCodeAt(i) >= 97 && nameValue.charCodeAt(i) <= 122) {
-                    Success(name, errorMessageName, nameChecked);
+                    success(name, errorMessageName);
+                    nameChecked = true;
                 } else {
-                    Error(name, errorMessageName, nameChecked);
+                    error(name, errorMessageName);
                     break;
                 }
             };
             if (nameValue == 0) {
-                Empty(name, errorMessageName, nameChecked);
+                empty(name, errorMessageName);
             }
         } else if (e.target.name == 'surname') {
             surnameValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (surnameValue.length > 3 && surnameValue.charCodeAt(i) >= 97 && 
                 surnameValue.charCodeAt(i) <= 122) {
-                    Success(surname, errorMessageSurname, surnameChecked);
+                    success(surname, errorMessageSurname);
+                    surnameChecked = true;
                 } else {
-                    Error(surname, errorMessageSurname, surnameChecked);
+                    error(surname, errorMessageSurname);
                     break;
                 }
             };
             if (surnameValue == 0) {
-                Empty(surname, errorMessageSurname, surnameChecked);
+                empty(surname, errorMessageSurname);
             }
         } else if (e.target.name == 'dni') {
             dniValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (dniValue.length > 7 && dniValue.charCodeAt(i) >= 48 && dniValue.charCodeAt(i) <= 57) {
-                    Success(dni, errorMessageDni, dniChecked);
+                    success(dni, errorMessageDni);
+                    dniChecked = true;
                 } else {
-                    Error(dni, errorMessageDni, dniChecked);
+                    error(dni, errorMessageDni);
                     break;
                 }
             };
             if (dniValue == 0) {
-                Empty(dni, errorMessageDni, dniChecked);
+                empty(dni, errorMessageDni);
             }
         } else if (e.target.name == 'birthday') {
             birthdayValue = e.target.value;
             if (birthdayValue == 0) {
-                Empty(birthday, errorMessageBirthday, birthdayChecked);
+                empty(birthday, errorMessageBirthday);
             } else{
-                Success(birthday, errorMessageBirthday, birthdayChecked);
+                success(birthday, errorMessageBirthday);
+                birthdayChecked = true;
             }
         } else if (e.target.name == 'tel') {
             telValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (telValue.length === 10 && telValue.charCodeAt(i) >= 48 && telValue.charCodeAt(i) <= 57) {
-                    Success(tel, errorMessageTel, telChecked);
+                    success(tel, errorMessageTel);
+                    telChecked = true;
                 } else {
-                    Error(tel, errorMessageTel, telChecked);
+                    error(tel, errorMessageTel);
                     break;
                 }
             };
             if (telValue == 0) {
-                Empty(tel, errorMessageTel, telChecked);
+                empty(tel, errorMessageTel);
             }
         } else if (e.target.name == 'address') {
             addressValue = (e.target.value).toLowerCase();
@@ -122,91 +124,102 @@ window.onload = function(){
                 if (addressValue.length >= 5 && ((addressValue.charCodeAt(i) >= 48 && addressValue.charCodeAt(i) <= 57) 
                 || (addressValue.charCodeAt(i) >= 97 && addressValue.charCodeAt(i) <= 122) || 
                 addressValue.charCodeAt(i) == 32)) {
-                    Success(address, errorMessageAddress, addressChecked);
+                    success(address, errorMessageAddress);
+                    addressChecked = true;
                 } else {
-                    Error(address, errorMessageAddress, addressChecked);
+                    error(address, errorMessageAddress);
                     break;
                 }
             };
             if (!addressValue.includes(' ')) {
-                Error(address, errorMessageAddress, addressChecked);
+                error(address, errorMessageAddress);
             }
             if (addressValue == 0) {
-                Empty(address, errorMessageAddress, addressChecked);
+                empty(address, errorMessageAddress);
             }
         } else if (e.target.name == 'location') {
             locationValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (locationValue.length >= 5 && ((locationValue.charCodeAt(i) >= 48 && 
                 locationValue.charCodeAt(i) <= 57) || (locationValue.charCodeAt(i) >= 97 && 
-                locationValue.charCodeAt(i) <= 122))) {
-                    Success(location, errorMessageLocation, locationChecked);
+                locationValue.charCodeAt(i) <= 122) || locationValue.charCodeAt(i) == 32)) {
+                    success(location, errorMessageLocation);
+                    locationChecked = true;
                 } else {
-                    Error(location, errorMessageLocation, locationChecked);
+                    error(location, errorMessageLocation);
                     break;
                 }
             };
+            if (!locationValue.includes(' ')) {
+                error(location, errorMessageLocation);
+            }
             if (locationValue == 0) {
-                Empty(location, errorMessageLocation, locationChecked);
+                empty(location, errorMessageLocation);
             }
         } else if (e.target.name == 'postal') {
             postalValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if ((postalValue.length >= 4 && postalValue.length <= 5) && (postalValue.charCodeAt(i) >= 48 && 
                 postalValue.charCodeAt(i) <= 57)) {
-                    Success(postal, errorMessagePostal, postalChecked);
+                    success(postal, errorMessagePostal);
+                    postalChecked = true;
                 } else {
-                    Error(postal, errorMessagePostal, postalChecked);
+                    error(postal, errorMessagePostal);
                     break;
                 }
             };
             if (postalValue == 0) {
-                Empty(postal, errorMessagePostal, postalChecked);
+                empty(postal, errorMessagePostal);
             }
         } else if (e.target.name == 'email') {
             if (emailExpression.test(e.target.value)) {
-                Success(email, errorMessageEmail, emailChecked);
+                success(email, errorMessageEmail);
+                emailChecked = true;
             } else if (e.target.value.length == 0){
-                Empty(email, errorMessageEmail, emailChecked);
+                empty(email, errorMessageEmail);
             } else {
-                Error(email, errorMessageEmail, emailChecked);
+                error(email, errorMessageEmail);
             }
         } else if (e.target.name == 'password') {
-            passValue = e.target.value;
+            passValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (passValue.length >= 8 && ((passValue.charCodeAt(i) >= 48 && passValue.charCodeAt(i) <= 57) || 
                 (passValue.charCodeAt(i) >= 97 && passValue.charCodeAt(i) <= 122))) {
-                    Success(password, errorMessagePass, signUpPassChecked);
+                    success(password, errorMessagePass);
+                    signUpPassChecked = true;
                 } else {
-                    Error(password, errorMessagePass, signUpPassChecked);
+                    error(password, errorMessagePass);
                     break;
                 };
             };
             if (passValue.length == 0) {
-                Empty(password, errorMessagePass, signUpPassChecked);
+                empty(password, errorMessagePass);
             };
         } else if (e.target.name == 'pass-repeat') {
-            passRepeatValue = e.target.value;
+            passRepeatValue = (e.target.value).toLowerCase();
             for (var i = 0; i < e.target.value.length;i++) {
                 if (passRepeatValue.length >= 8 && ((passRepeatValue.charCodeAt(i) >= 48 && 
                 passRepeatValue.charCodeAt(i) <= 57) || (passRepeatValue.charCodeAt(i) >= 97 && 
                 passRepeatValue.charCodeAt(i) <= 122))) {    
-                    Success(passRepeat, errorMessagePassRepeat, passRepeatChecked);
+                    success(passRepeat, errorMessagePassRepeat);
+                    passRepeatChecked = true;
                     errorMessagePassRepeat2.classList.remove('sign-up-form-input-error-active');
                         if (passValue == passRepeatValue) {
-                            Success(password, errorMessagePassRepeat, signUpPassChecked);
-                            Success(passRepeat, errorMessagePassRepeat, passRepeatChecked);
+                            success(password, errorMessagePassRepeat);
+                            signUpPassChecked = true;
+                            success(passRepeat, errorMessagePassRepeat);
+                            passRepeatChecked = true;
                         } else {
                             passRepeat.classList.add('sign-up-form--error');
-                            Error(password, errorMessagePassRepeat2, passRepeatChecked);
+                            error(password, errorMessagePassRepeat2);
                         }
                 } else {
-                    Error(passRepeat, errorMessagePassRepeat, passRepeatChecked);
+                    error(passRepeat, errorMessagePassRepeat);
                     break;
                 };
             };
             if (passRepeatValue.length == 0) {
-                Empty(passRepeat, errorMessagePassRepeat, passRepeatChecked);
+                empty(passRepeat, errorMessagePassRepeat);
             };
         };
     };
@@ -216,37 +229,69 @@ window.onload = function(){
     });
     function submitFunction(e){
         e.preventDefault();
-        console.log(nameChecked, surnameChecked, dniChecked, birthdayChecked, telChecked 
-        , addressChecked, locationChecked, postalChecked, emailChecked, signUpPassChecked, passRepeatChecked);
-        if (nameChecked && surnameChecked && dniChecked && birthdayChecked && telChecked && addressChecked && 
-            locationChecked && postalChecked && emailChecked && signUpPassChecked && passRepeatChecked) {
-            alert(' The name is: ' + name.value + '\n' + ' The surname is: ' + surname.value + '\n' + ' The dni is: ' + 
-            dni.value + '\n' + ' The birthday is: ' + birthday.value + '\n' + ' The telephone number is: ' + tel.value + 
-            '\n' + ' The address is: ' + address.value + '\n' + ' The location is: ' + location.value + '\n' + 
-            ' The postal is: ' + postal.value + '\n' + ' The email is: ' + email.value + '\n' + ' The password is: ' + 
-            password.value);
-            form.reset();
-            document.getElementById('sign-up-form-message-success').classList.add
-            ('sign-up-form-message-success-active');
-            document.getElementById('sign-up-form-message').classList.remove('sign-up-form-message-error-active');
-            name.classList.remove('sign-up-form--success');
-            surname.classList.remove('sign-up-form--success');
-            dni.classList.remove('sign-up-form--success');
-            birthday.classList.remove('sign-up-form--success');
-            tel.classList.remove('sign-up-form--success');
-            address.classList.remove('sign-up-form--success');
-            location.classList.remove('sign-up-form--success');
-            postal.classList.remove('sign-up-form--success');
-            passRepeat.classList.remove('sign-up-form--success');
-            password.classList.remove('sign-up-form--success');
-            email.classList.remove('sign-up-form--success');
-            setTimeout(deleteMessage, 5000);
-            function deleteMessage() {
-                document.getElementById('sign-up-form-message-success').classList.remove
-                ('sign-up-form-message-success-active');
+        var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + name.value + "&lastName=" + 
+        surname.value + "&dni=" + dni.value + "&dob=" + birthday.value + "&phone=" + tel.value + 
+        "&address=" + address.value + "&city=" + location.value + "&zip=" + postal.value + "&email=" 
+        + email.value + "&password=" + password.value;
+        console.log(url);
+        fetch(url)
+        .then(function(request){
+            return request.json();
+        })
+        .then(function(data){
+            if (data.success) {
+                alert('Success: ' + data.success + '\n' + 'Message: ' + data.msg + '\n' + 'The name is: ' + 
+                name.value + '\n' + 'The surname is: ' + surname.value + '\n' + 'The dni is: ' + dni.value + '\n' + 
+                'The birthday is: ' + birthday.value + '\n' + 'The telephone number is: ' + tel.value + 
+                '\n' + 'The address is: ' + address.value + '\n' + 'The location is: ' + location.value + '\n' + 
+                'The postal is: ' + postal.value + '\n' + 'The email is: ' + email.value + '\n' + 
+                'The password is: ' + password.value + 'The password repeated is: ' + passRepeat.value);
+                localStorage.setItem('name', name.value);
+                localStorage.setItem('surname', surname.value);
+                localStorage.setItem('birthday', birthday.value);
+                localStorage.setItem('telephone', tel.value);
+                localStorage.setItem('address', address.value);
+                localStorage.setItem('location', location.value);
+                localStorage.setItem('postal', postal.value);
+                localStorage.setItem('email', email.value);
+                localStorage.setItem('password', password.value);
+                localStorage.setItem('confirm password', passRepeat.value);
+                form.reset();
+            } else {
+                return data;
             }
-        } else {
-            document.getElementById('sign-up-form-message').classList.add('sign-up-form-message-error-active');
+        })
+        .then(function(data){
+            console.log(data);
+            errors = data.errors;
+            console.log(errors);
+            var errors = [];
+            for (let i = 0; i < array.length; i++) {
+                errors += '\n' + data.errors[i].msg;
+            }
+            throw new Error(errors);
+        })
+        .catch(function(error){
+            alert(error);
+        })
+        document.getElementById('sign-up-form-message-success').classList.add
+        ('sign-up-form-message-success-active');
+        document.getElementById('sign-up-form-message').classList.remove('sign-up-form-message-error-active');
+        name.classList.remove('sign-up-form--success');
+        surname.classList.remove('sign-up-form--success');
+        dni.classList.remove('sign-up-form--success');
+        birthday.classList.remove('sign-up-form--success');
+        tel.classList.remove('sign-up-form--success');
+        address.classList.remove('sign-up-form--success');
+        location.classList.remove('sign-up-form--success');
+        postal.classList.remove('sign-up-form--success');
+        passRepeat.classList.remove('sign-up-form--success');
+        password.classList.remove('sign-up-form--success');
+        email.classList.remove('sign-up-form--success');
+        setTimeout(deleteMessage, 3000);
+        function deleteMessage() {
+            document.getElementById('sign-up-form-message-success').classList.remove
+            ('sign-up-form-message-success-active');
         }
     }
     form.addEventListener('submit', submitFunction);

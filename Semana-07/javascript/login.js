@@ -8,48 +8,60 @@ window.onload = function(){
     var errorMessagePass = document.getElementById('form-input-error-pass');
     var emailChecked = false;
     var passChecked = false;
-    var Success = function(input, error) {
+    var success = function(input, error) {
         input.classList.remove('form--error');
         input.classList.add('form--success');
         error.classList.remove('form-message-active');
     }
-    var Error = function(input, error) {
+    var error = function(input, error) {
         input.classList.add('form--error');
         input.classList.remove('form--success');
         error.classList.add('form-message-active');
     }
-    var Empty = function(input, error) {
+    var empty = function(input, error) {
         input.classList.remove('form--error');
         input.classList.remove('form--success');
         error.classList.remove('form-message-active');
     }
-    function validateForm(e) {
+    var hasLetters = function(input) {
+        for (var i = 0; i < input.length; i++) {
+            if ((input.charCodeAt(i) >= 97 && input.charCodeAt(i) <= 122) || 
+            (input.charCodeAt(i) >= 65 && input.charCodeAt(i) <= 90)){
+            } else {
+                return false;
+            };
+        };
+        return true;
+    };
+    var hasNumbers = function(input) {
+        for (var i = 0; i < input.length; i++) {
+            if (input.charCodeAt(i) >= 48 && input.charCodeAt(i) <= 57) {
+            } else {
+                return false;
+            };
+        };
+        return true;
+    };
+    var validateForm = function(e) {
         if (e.target.name == 'email') {
             if (emailExpression.test(e.target.value)) {
-                Success(email, errorMessageEmail, emailChecked);
+                success(email, errorMessageEmail);
                 emailChecked = true;
             } else if (e.target.value.length == 0) {
-                Empty(email, errorMessageEmail);
+                empty(email, errorMessageEmail);
             } else {
-                Error(email, errorMessageEmail);
+                error(email, errorMessageEmail);
             }
         } else if (e.target.name == 'password') {
-            passValue = (e.target.value).toLowerCase();
-            for (var i = 0; i < e.target.value.length;i++) {
-                if (passValue.length >= 8 && ((passValue.charCodeAt(i) >= 48 && passValue.charCodeAt(i) <= 57) || 
-                (passValue.charCodeAt(i) >= 97 && passValue.charCodeAt(i) <= 122))) {
-                    Success(password, errorMessagePass, passChecked);
-                    passChecked = true;
-                } else {
-                    Error(password, errorMessagePass);
-                    break;
-                };
+            passValue = e.target.value;
+            if (hasLetters(passValue) || hasNumbers(passValue) || passValue.length < 8) {
+                error(password, errorMessagePass);
+            } else {
+                success(password, errorMessagePass);
+                passChecked = true;
             };
-            /*if (!passValue.includes(passValue.charCodeAt(i) >= 97 && passValue.charCodeAt(i) <= 122)) {
-                Error(password, errorMessagePass);
-            }*/
             if (passValue.length == 0) {
-                Empty(password, errorMessagePass);
+                empty(password, errorMessagePass);
             };
         };
     };
@@ -57,19 +69,34 @@ window.onload = function(){
         input.addEventListener('keyup', validateForm);
         input.addEventListener('blur', validateForm);
     });
-    console.log(emailChecked, passChecked);
     function submitFunction(e){
         e.preventDefault();
         if (emailChecked && passChecked) {
-            alert(' The email is: ' + email.value + '\n' + ' The password is: ' + password.value);
+            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email.value + '&password=' + 
+            password.value;
+            fetch(url)
+            .then(function(request){
+                return request.json();
+            })
+            .then(function(data){
+                if (data.success) {
+                    alert('Success: ' + data.success + '\n' + 'Message: ' + data.msg + '\n' + 'The email is: ' + 
+                    email.value + '\n' + 'The password is: ' + password.value);
+                    form.reset();
+                } else {
+                    throw new Error(data.msg)
+                }
+            })
+            .catch(function(error){
+                alert(error);
+            })
             document.getElementById('form-message-success').classList.add('form-message-success-active');
             document.getElementById('form-message').classList.remove('form-message-error-active');
             password.classList.remove('form--success');
             email.classList.remove('form--success');
             emailChecked = false;
             passChecked = false;
-            form.reset();
-            setTimeout(deleteMessage, 5000);
+            setTimeout(deleteMessage, 3000);
             function deleteMessage() {
                 document.getElementById('form-message-success').classList.remove('form-message-success-active');
             }
