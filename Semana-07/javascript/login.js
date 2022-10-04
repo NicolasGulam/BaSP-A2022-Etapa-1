@@ -6,8 +6,6 @@ window.onload = function(){
     var password = document.getElementById('password');
     var errorMessageEmail = document.getElementById('form-input-error-email');
     var errorMessagePass = document.getElementById('form-input-error-pass');
-    var emailChecked = false;
-    var passChecked = false;
     var success = function(input, error) {
         input.classList.remove('form--error');
         input.classList.add('form--success');
@@ -46,7 +44,6 @@ window.onload = function(){
         if (e.target.name == 'email') {
             if (emailExpression.test(e.target.value)) {
                 success(email, errorMessageEmail);
-                emailChecked = true;
             } else if (e.target.value.length == 0) {
                 empty(email, errorMessageEmail);
             } else {
@@ -58,7 +55,6 @@ window.onload = function(){
                 error(password, errorMessagePass);
             } else {
                 success(password, errorMessagePass);
-                passChecked = true;
             };
             if (passValue.length == 0) {
                 empty(password, errorMessagePass);
@@ -71,37 +67,43 @@ window.onload = function(){
     });
     function submitFunction(e){
         e.preventDefault();
-        if (emailChecked && passChecked) {
-            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email.value + '&password=' + 
-            password.value;
-            fetch(url)
-            .then(function(request){
-                return request.json();
-            })
-            .then(function(data){
-                if (data.success) {
-                    alert('Success: ' + data.success + '\n' + 'Message: ' + data.msg + '\n' + 'The email is: ' + 
-                    email.value + '\n' + 'The password is: ' + password.value);
-                    form.reset();
-                } else {
-                    throw new Error(data.msg)
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email.value + '&password=' + 
+        password.value;
+        fetch(url)
+        .then(function(request){
+            return request.json();
+        })
+        .then(function(data){
+            if (!data.success && email.classList.contains('form--success') && 
+            password.classList.contains('form--success')) {
+                throw new Error(data.msg);
+            } else if (!data.success) {
+                var errors = [];
+                for (let i = 0; i < data.errors.length; i++) {
+                    errors += '\n' + data.errors[i].msg;
                 }
-            })
-            .catch(function(error){
-                alert(error);
-            })
-            document.getElementById('form-message-success').classList.add('form-message-success-active');
-            document.getElementById('form-message').classList.remove('form-message-error-active');
-            password.classList.remove('form--success');
-            email.classList.remove('form--success');
-            emailChecked = false;
-            passChecked = false;
-            setTimeout(deleteMessage, 3000);
-            function deleteMessage() {
-                document.getElementById('form-message-success').classList.remove('form-message-success-active');
+                if (!email.classList.contains('form--success')) {
+                    email.classList.add('form--error');
+                }
+                if (!password.classList.contains('form--success')) {
+                    password.classList.add('form--error');
+                }
+                throw new Error(errors);
+            } else {
+                alert('Success: ' + data.success + '\n' + 'Message: ' + data.msg + '\n' + 'The email is: ' + 
+                email.value + '\n' + 'The password is: ' + password.value);
+                form.reset();
+                password.classList.remove('form--success');
+                email.classList.remove('form--success');
             }
-        } else {
-            document.getElementById('form-message').classList.add('form-message-error-active');
+        })
+        .catch(function(error){
+            alert(error);
+        })
+        document.getElementById('form-message-success').classList.add('form-message-success-active');
+        setTimeout(deleteMessage, 3000);
+        function deleteMessage() {
+            document.getElementById('form-message-success').classList.remove('form-message-success-active');
         }
     }
     form.addEventListener('submit', submitFunction);
