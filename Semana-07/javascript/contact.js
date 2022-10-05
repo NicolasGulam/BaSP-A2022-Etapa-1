@@ -7,17 +7,12 @@ window.onload = function(){
     var name = document.getElementById('name')
     var email = document.getElementById('email');
     var area = document.getElementById('area');
-    var terms = document.getElementById('terms');
     var message = document.getElementById('message');
     var errorMessageEmail = document.getElementById('form-input-error-email');
     var errorMessageName = document.getElementById('form-input-error-name');
-    var errorMessageArea = document.getElementById('form-input-error-area');
-    var errorMessageTerms = document.getElementById('form-input-error-terms');
     var errorMessageMessage = document.getElementById('form-input-error-message');
     var nameChecked = false;
     var emailChecked = false;
-    var areaChecked = false;
-    var termsChecked = false;
     var textChecked = false;
     var success = function(input, error) {
         input.classList.remove('contact-form--error');
@@ -82,10 +77,6 @@ window.onload = function(){
         input.addEventListener('keyup', validateForm);
         input.addEventListener('blur', validateForm);
     });
-    selects.forEach(function(select){
-        select.addEventListener('keyup', validateForm);
-        select.addEventListener('blur', validateForm);
-    });
     textAreas.forEach(function(textarea){
         textarea.addEventListener('keyup', validateForm);
         textarea.addEventListener('blur', validateForm);
@@ -104,8 +95,6 @@ window.onload = function(){
             message.classList.remove('contact-form--success');
             nameChecked = false;
             emailChecked = false;
-            areaChecked = false;
-            termsChecked = false;
             textChecked = false;
             setTimeout(deleteMessage, 3000);
             function deleteMessage() {
@@ -123,7 +112,6 @@ window.onload = function(){
             if (!message.classList.contains('contact-form--success')) {
                 message.classList.add('contact-form--error');
             }
-            
         }
     }
     form.addEventListener('submit', submitFunction);

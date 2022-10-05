@@ -40,6 +40,16 @@ window.onload = function(){
         };
         return true;
     };
+    var isAlphanumeric = function(input) {
+        for (var i = 0; i < input.length; i++) {
+            if ((input.charCodeAt(i) >= 97 && input.charCodeAt(i) <= 122) || (input.charCodeAt(i) >= 65 && 
+            input.charCodeAt(i) <= 90) || (input.charCodeAt(i) >= 48 && input.charCodeAt(i) <= 57)) {
+            } else {
+                return false;
+            };
+        };
+        return true;
+    };
     var validateForm = function(e) {
         if (e.target.name == 'email') {
             if (emailExpression.test(e.target.value)) {
@@ -53,9 +63,11 @@ window.onload = function(){
             passValue = e.target.value;
             if (hasLetters(passValue) || hasNumbers(passValue) || passValue.length < 8) {
                 error(password, errorMessagePass);
-            } else {
+            } else if (isAlphanumeric(passValue)) {
                 success(password, errorMessagePass);
-            };
+            } else {
+                error(password, errorMessagePass);
+            }
             if (passValue.length == 0) {
                 empty(password, errorMessagePass);
             };

@@ -92,6 +92,17 @@ window.onload = function(){
         };
         return true;
     };
+    var isAlphanumeric = function(input) {
+        for (var i = 0; i < input.length; i++) {
+            if ((input.charCodeAt(i) >= 97 && input.charCodeAt(i) <= 122) || (input.charCodeAt(i) >= 65 && 
+            input.charCodeAt(i) <= 90) || (input.charCodeAt(i) >= 48 && input.charCodeAt(i) <= 57) || 
+            (input.charCodeAt(i) == 32)) {
+            } else {
+                return false;
+            };
+        };
+        return true;
+    };
     function validateForm(e) {
         if (e.target.name == 'name') {
             nameValue = (e.target.value).toLowerCase();
@@ -165,14 +176,15 @@ window.onload = function(){
             addressValue = e.target.value;
             hasLetters(address);
             hasNumbers(address);
-            if (letterValid || numberValid && addressValue.length <= 5) {
+            if (letterValid || numberValid && addressValue.length <= 3) {
                 error(address, errorMessageAddress);
             } else if (!hasSpace(addressValue)) {
                 error(address, errorMessageAddress);
-            } else {
+            } else if (!addressValue.includes(' ')) {
+                error(address, errorMessageAddress);
+            } else if (isAlphanumeric(addressValue)) {
                 success(address, errorMessageAddress);
-            }
-            if (!addressValue.includes(' ')) {
+            } else {
                 error(address, errorMessageAddress);
             }
             if (addressValue == 0) {
@@ -186,10 +198,11 @@ window.onload = function(){
                 error(location, errorMessageLocation);
             } else if (!hasSpace(locationValue)) {
                 error(location, errorMessageLocation);
-            } else {
+            } else if (!locationValue.includes(' ')) {
+                error(location, errorMessageLocation);
+            } else if (isAlphanumeric(locationValue)) {
                 success(location, errorMessageLocation);
-            }
-            if (!locationValue.includes(' ')) {
+            } else {
                 error(location, errorMessageLocation);
             }
             if (locationValue == 0) {
@@ -221,16 +234,21 @@ window.onload = function(){
             passValue = (e.target.value).toLowerCase();
             hasLetters(password);
             hasNumbers(password);
-            for (var i = 0; i < e.target.value.length;i++) {
-                if (letterValid || numberValid || passValue.length < 8) {
-                    error(password, errorMessagePass);
-                } else {
+            if (letterValid || numberValid || passValue.length < 8) {
+                error(password, errorMessagePass);
+            } else if (isAlphanumeric(passValue)) {
+                success(password, errorMessagePass);
+                if (passValue == passRepeatValue) {
                     success(password, errorMessagePass);
-                };
-                if (passValue.length == 0) {
-                    empty(password, errorMessagePass);
-                };
-            };
+                    success(passRepeat, errorMessagePassRepeat);
+                    errorMessagePassRepeat2.classList.remove('sign-up-form-input-error-active');
+                } else {
+                    passRepeat.classList.add('sign-up-form--error');
+                    error(password, errorMessagePassRepeat2);
+                }
+            } else {
+                error(password, errorMessagePass);
+            }
             if (passValue.length == 0) {
                 empty(password, errorMessagePass);
             };
@@ -238,20 +256,20 @@ window.onload = function(){
             passRepeatValue = (e.target.value).toLowerCase();
             hasLetters(passRepeat);
             hasNumbers(passRepeat);
-            for (var i = 0; i < e.target.value.length;i++) {
-                if (letterValid || numberValid || passRepeatValue.length <= 8) {
-                    error(passRepeat, errorMessagePassRepeat);
-                } else {
+            if (letterValid || numberValid || passRepeatValue.length <= 8) {
+                error(passRepeat, errorMessagePassRepeat);
+            } else if (isAlphanumeric(passRepeatValue)) {
+                success(passRepeat, errorMessagePassRepeat);
+                if (passValue == passRepeatValue) {
+                    success(password, errorMessagePass);
                     success(passRepeat, errorMessagePassRepeat);
                     errorMessagePassRepeat2.classList.remove('sign-up-form-input-error-active');
-                    if (passValue == passRepeatValue) {
-                        success(password, errorMessagePass);
-                        success(passRepeat, errorMessagePassRepeat);
-                    } else {
-                        passRepeat.classList.add('sign-up-form--error');
-                        error(password, errorMessagePassRepeat2);
-                    }
-                };
+                } else {
+                    passRepeat.classList.add('sign-up-form--error');
+                    error(password, errorMessagePassRepeat2);
+                }
+            } else {
+                error(password, errorMessagePass);
             };
             if (passRepeatValue.length == 0) {
                 empty(passRepeat, errorMessagePassRepeat);
